@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jay Bhole Motor Driving School</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; padding: 20px; }
+        .container { background: #f5f5f5; padding: 20px; border-radius: 8px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; }
+        .form-control { width: 100%; padding: 8px; margin-bottom: 10px; }
+        .btn { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        .btn:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Jay Bhole Motor Driving School</h1>
+        <p>21 Days Course</p>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" name="phone" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Time</label>
+                <input type="time" name="time" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Date</label>
+                <input type="date" name="date" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Course Duration</label>
+                <select name="days" class="form-control" required>
+                    <option value="21">21 Days</option>
+                    <option value="10">10 Days</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Payment Status</label>
+                <select name="payment" class="form-control" required>
+                    <option value="pending">Payment Pending</option>
+                    <option value="received">Payment Received</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Payment Options</label>
+                <input type="checkbox" name="first_payment" value="1200"> First Payment (₹1200)<br>
+                <input type="checkbox" name="second_payment" value="1000"> Second Payment (₹1000)<br>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted successfully!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
